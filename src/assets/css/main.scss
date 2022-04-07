@@ -1,0 +1,86 @@
+// 1 - HELPERS
+@import "1-helpers/normalize";
+@import "1-helpers/mixins";
+// @import "1-helpers/aos";
+@import "1-helpers/fonts";
+@import "1-helpers/variables";
+
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 1920px;
+  position: relative;
+  margin: 0;
+  font-family: $main;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $text;
+  background: $white;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: $black;
+  font-family: $heading;
+  font-size: 3.25rem;
+  font-weight: 500;
+  margin: 0;
+
+  @media (max-width: 900px) {
+    font-size: 2.5rem;
+    margin: 1em 0 0.7em 0;
+  }
+}
+
+h2 {
+  color: $black;
+  font-family: $heading;
+  font-weight: 400;
+  font-size: 2.85rem;
+  margin: 0;
+
+  @media (max-width: 900px) {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+@import "./2-sections/nav";
+
+.sections-wrapper {
+  position: relative;
+  top: 5em;
+  margin: 0 auto;
+  width: 65vw;
+  background-color: rgba(whitesmoke, 0.1);
+  z-index: 3;
+
+  @media (max-width: 900px) {
+    top: 4em;
+    width: 85vw;
+  }
+}
+
+
+// @import "./2-sections/about";
